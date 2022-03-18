@@ -22,11 +22,11 @@ const Bookmark: NextPage = () => {
           (bookmark) => bookmark.image_id === image.image_id
         );
         if (isBookmarked) {
-          const newBookmarks = oldBookmarks.filter(
+          let newBookmarks = oldBookmarks.filter(
             (bookmark) => bookmark.image_id !== image.image_id
           );
 
-          newBookmarks.sort(function (a, b) {
+          newBookmarks = newBookmarks.sort(function (a, b) {
             if (a.image_id > b.image_id) {
               return 1;
             }
@@ -40,9 +40,9 @@ const Bookmark: NextPage = () => {
           return newBookmarks;
         }
 
-        const newBookmarks = [...oldBookmarks, image];
+        let newBookmarks = [...oldBookmarks, image];
 
-        newBookmarks.sort(function (a, b) {
+        newBookmarks = newBookmarks.sort(function (a, b) {
           if (a.image_id > b.image_id) {
             return 1;
           }
