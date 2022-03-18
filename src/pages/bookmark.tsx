@@ -26,10 +26,34 @@ const Bookmark: NextPage = () => {
             (bookmark) => bookmark.image_id !== image.image_id
           );
 
+          newBookmarks.sort(function (a, b) {
+            if (a.image_id > b.image_id) {
+              return 1;
+            }
+            if (a.image_id < b.image_id) {
+              return -1;
+            }
+            // a must be equal to b
+            return 0;
+          });
+
           return newBookmarks;
         }
 
-        return [...oldBookmarks, image];
+        const newBookmarks = [...oldBookmarks, image];
+
+        newBookmarks.sort(function (a, b) {
+          if (a.image_id > b.image_id) {
+            return 1;
+          }
+          if (a.image_id < b.image_id) {
+            return -1;
+          }
+          // a must be equal to b
+          return 0;
+        });
+
+        return newBookmarks;
       });
     },
     [setBookmarkeds]
