@@ -1,0 +1,52 @@
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  min-height: 272px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  transition: all 0.25s;
+
+  .imageContentContainer {
+    flex: 1;
+    margin-top: 0.25rem;
+
+    display: flex;
+    align-items: center;
+
+    transition: all 0.25s;
+
+    span {
+      font-size: 0;
+      line-height: 0;
+      display: block;
+      margin-right: 0.5rem;
+    }
+
+    p {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &.isSelected .imageContentContainer {
+    color: var(--purple-hover);
+  }
+
+  &:hover {
+    opacity: 0.8 !important;
+  }
+}
+
+.marker {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  z-index: 2;
+  left: 0.625rem;
+}

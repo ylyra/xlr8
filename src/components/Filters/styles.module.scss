@@ -1,0 +1,70 @@
+.filtersWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  button {
+    border: 0;
+    background: var(--gray-light);
+    padding: 0.5rem 0.75rem;
+
+    &.isSelected {
+      background: var(--black);
+      color: var(--gray-light);
+    }
+
+    &:first-child {
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+
+    transition: background 0.25s;
+
+    &:hover:not(.isSelected) {
+      background: var(--gray-light-hover);
+    }
+  }
+}
+
+.bottomFiltersWrapper {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 999;
+  padding: 10px;
+  background: var(--gray-100);
+  left: 0;
+  right: 0;
+
+  button {
+    border: 0;
+    background: var(--gray-light);
+    padding: 0.5rem 0.75rem;
+
+    &.isSelected {
+      background: var(--black);
+      color: var(--gray-light);
+    }
+
+    &:first-child {
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+    }
+
+    &:last-child {
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+    }
+
+    transition: background 0.25s;
+
+    &:hover:not(.isSelected) {
+      background: var(--gray-light-hover);
+    }
+  }
+}

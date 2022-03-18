@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+
+  --black: #29292e;
+
+  --shadow: #050206;
+
+  --purple: #835afd;
+  --purple-hover: #6f4bd8;
+
+  --danger: #e73f5d;
+  --danger-hover: #d73754;
+
+  --gray-50: #fefefe;
+  --gray-100: #f8f8f8;
+  --gray-light: #dbdcdd;
+  --gray-medium: #a8a8b3;
+  --gray-dark: #737380;
+  --gray-light-hover: #cecece;
+  --gray-medium-hover: #7e7e86;
+
+  --pink-light: #d67ee2;
+  --pink-dark: #e559f9;
+}
+
+body {
+  background: var(--gray-100);
+  color: var(--black);
+}
+
+@media (max-width: 1080px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media (max-width: 720px) {
+  html {
+    font-size: 87.5%;
+  }
+}
+
+body,
+input,
+button,
+textarea {
+  font: 400 1rem "Inter", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+button {
+  cursor: pointer;
+}

@@ -1,0 +1,41 @@
+.headerWrapper {
+  background: var(--black);
+  color: var(--gray-50);
+
+  .headerContentContainer {
+    max-width: 80rem;
+    padding: 0 1.5rem;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .homeButton {
+      color: var(--gray-50);
+      text-decoration: none;
+      font-family: "Rajdhani", sans-serif;
+      font-size: 1.5rem;
+      line-height: 2.25rem;
+      font-weight: bold;
+
+      transition: filter 0.25s;
+
+      &:hover {
+        filter: brightness(0.75);
+      }
+    }
+
+    .bookmarkLink {
+      font-size: 0;
+      line-height: 0;
+      text-decoration: none;
+      color: var(--gray-50);
+
+      transition: filter 0.25s;
+
+      &:hover {
+        filter: brightness(0.75);
+      }
+    }
+  }
+}
